@@ -17,7 +17,7 @@ New loop that iterates over my config.txt. I resolve the domain with `getent` an
 Done!
 
 ## use it yourself
-If you want to use it yourself, just create a `config.txt` and add your DynDNS-Domains or just plain IPs to the script. Now you just need a way to run it every x-Minutes.
+If you want to use it yourself, just create a `config.txt` and add your DynDNS-Domains or just plain IPs to the script. Now you just need a way to run it every x-Minutes. ONLY IPV4 SUPPORTED atm. It's getting late, have to sleep. Maybe another time i add IPv6 support to my RegEx.
 
 config.txt
 ```bash
