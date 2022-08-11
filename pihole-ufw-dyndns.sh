@@ -15,9 +15,9 @@ if $logging; then
   exec 3>&1 4>&2
   trap 'exec 2>&4 1>&3' 0 1 2 3
   exec 1>logs/log-$(date +%Y-%m-%d).out 2>&1
+  # start message showing git, domains, and variables from config
   echo "### https://github.com/bym0/pihole-ufw-dyndns ###"
-  echo "Domains: "$dyndns_domains
-  echo "Logging: "$logging
+  cat config.txt
 fi
 
 ### Script
