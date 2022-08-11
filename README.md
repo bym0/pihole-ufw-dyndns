@@ -21,8 +21,11 @@ If you want to use it yourself, just create a `config.txt` and add your DynDNS-D
 
 config.txt
 ```bash
-# CONFIG FILE FOR PIHOLE UFW DYNDNS
+### CONFIG FILE FOR PIHOLE UFW DYNDNS
+# add your domains separated by space
 dyndns_domains="127.0.1 example.com example.de"
+# enable (true) or disable (false) logging, this logs to current folder -> logs
+logging="false"
 ```
 
 crontab
