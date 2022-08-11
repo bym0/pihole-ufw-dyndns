@@ -1,2 +1,5 @@
-# CONFIG FILE FOR PIHOLE UFW DYNDNS
+### CONFIG FILE FOR PIHOLE UFW DYNDNS
+# add your domains separated by space
 dyndns_domains="127.0.1 example.com example.de"
+# enable (true) or disable (false) logging, this logs to current folder -> logs
+logging="false"

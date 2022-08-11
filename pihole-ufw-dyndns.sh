@@ -3,7 +3,22 @@
 # Date: 11.08.2022
 # Purpose: Restrict Pi-hole/DNS (Port 53) Access to mentioned DynDNS/IPs. :)
 
+### Variables and config
+# source config
 source config.txt
+# check for logs folder
+if [ ! -d logs ]; then
+  mkdir -p logs
+fi
+# if logging enabled then log
+if $logging; then
+  exec 3>&1 4>&2
+  trap 'exec 2>&4 1>&3' 0 1 2 3
+  exec 1>logs/log-$(date +%Y-%m-%d).out 2>&1
+  echo "### https://github.com/bym0/pihole-ufw-dyndns ###"
+  echo "Domains: "$dyndns_domains
+  echo "Logging: "$logging
+fi
 
 ### Script
 # get existing rulesets and wipe them
