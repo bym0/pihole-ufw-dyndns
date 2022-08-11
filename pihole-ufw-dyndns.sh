@@ -2,6 +2,7 @@
 # Author: Timo Bergen <mail@timobergen.de>
 # Date: 11.08.2022
 # Purpose: Restrict Pi-hole/DNS (Port 53) Access to mentioned DynDNS/IPs. :)
+# This project was written fully on nano and CLI. :D
 
 ### Variables and config
 # source config
