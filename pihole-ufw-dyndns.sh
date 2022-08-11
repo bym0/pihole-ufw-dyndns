@@ -11,7 +11,7 @@ for ip in $(ufw status numbered | grep 53 | grep -oE '((1?[0-9][0-9]?|2[0-4][0-9
   sudo ufw delete allow from $ip to any port 53
 done
 
-# resolve domains and them to ufw
+# resolve domains and allow/add them through/to ufw
 for i in $dyndns_domains; do
   current_domain=$(getent hosts $i | awk '{ print $1 }')
   sudo ufw allow from $current_domain to any port 53
