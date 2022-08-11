@@ -16,6 +16,22 @@ New loop that iterates over my config.txt. I resolve the domain with `getent` an
 
 Done!
 
+## use it yourself
+If you want to use it yourself, just create a `config.txt` and add your DynDNS-Domains or just plain IPs to the script. Now you just need a way to run it every x-Minutes.
+
+config.txt
+```bash
+# CONFIG FILE FOR PIHOLE UFW DYNDNS
+dyndns_domains="127.0.1 example.com example.de"
+```
+
+crontab
+```bash
+*/5 * * * * /opt/pihole-ufw-dyndns/pihole-ufw-dyndns.sh
+```
+
+I set it up on cron and run it every 5 Minutes.
+
 ## safety
 
 Please use at your own caution. I know this is probably not the safest approach, but it works.
